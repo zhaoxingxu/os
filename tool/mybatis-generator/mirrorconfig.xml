@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <classPathEntry location="mysql-connector-java-5.1.26-bin.jar"/>
+
+    <context id="stormDB" targetRuntime="MyBatis3">
+
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://20.1.1.11:17401/dubhecf" userId="guweihua"
+                        password="wFy4vWDYxolzkFrjp3Fa">
+        </jdbcConnection>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <!--配置类信息-->
+        <javaModelGenerator targetPackage="com.weshare.dubhe.model.database.cf"
+                            targetProject="../../src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <!--config类生成的时候将上面的代码注释掉，放开此处的代码-->
+        <!--<javaModelGenerator targetPackage="com.weshare.dubhe.model.database.config"-->
+        <!--targetProject="../../src/main/java">-->
+        <!--<property name="enableSubPackages" value="true"/>-->
+        <!--<property name="trimStrings" value="true"/>-->
+        <!--</javaModelGenerator>-->
+
+        <sqlMapGenerator targetPackage="com.weshare.dubhe.cf"
+                         targetProject="../../src/main/resources/mapper">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="com.weshare.dubhe.dao.mapper.cf"
+                             targetProject="../../src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <!--<table tableName="config_consume" domainObjectName="ConfigConsume"/>-->
+        <!--<table tableName="config_integral_account" domainObjectName="ConfigIntegralAccount"/>-->
+        <!--<table tableName="config_integral_strategy" domainObjectName="ConfigIntegralStrategy"/>-->
+        <!--<table tableName="config_integral_task_parent" domainObjectName="ConfigIntegralTaskParent"/>-->
+        <!--<table tableName="config_message" domainObjectName="ConfigMessage"/>-->
+        <!--<table tableName="config_timer_production_integral" domainObjectName="ConfigTimerProductionIntegral"/>-->
+        <!--<table tableName="info_user" domainObjectName="InfoUser"/>-->
+        <!--<table tableName="assess_integral" domainObjectName="AssessIntegral"/>-->
+        <!--<table tableName="config_integral_task" domainObjectName="ConfigIntegralTask"/>-->
+        <!--<table tableName="config_task_data_params" domainObjectName="ConfigTaskDataParams"/>-->
+        <!--<table tableName="config_secret_keys" domainObjectName="ConfigSecretKeys"/>-->
+        <!--<table tableName="info_invitation_code" domainObjectName="InfoInvitationCode"/>-->
+        <!--<table tableName="config_task_data_params" domainObjectName="ConfigTaskDataParams"/>-->
+        <!--<table tableName="config_secret_keys" domainObjectName="ConfigSecretKeys"/>-->
+        <!--<table tableName="info_invitation_code" domainObjectName="InfoInvitationCode"/>-->
+        <!--<table tableName="assess_integral_unclaimed" domainObjectName="AssessIntegralUnclaimed"/>-->
+        <!--<table tableName="log_assess_integral_unclaimed" domainObjectName="LogAssessIntegralUnclaimed"/>-->
+        <!--<table tableName="record_auth_task_detail" domainObjectName="RecordAuthTaskDetail"/>-->
+        <!--<table tableName="log_record_auth_task_detail" domainObjectName="LogRecordAuthTaskDetail"/>-->
+        <!--<table tableName="log_assess_integral" domainObjectName="LogAssessIntegral"/>-->
+        <!--<table tableName="error_exception" domainObjectName="ErrorException"/>-->
+        <!--<table tableName="record_integral_work_detail" domainObjectName="RecordIntegralWorkDetail"/>-->
+        <!--<table tableName="config_type_dictionary" domainObjectName="ConfigTypeDictionary"/>-->
+        <!--<table tableName="config_type_mapping" domainObjectName="ConfigTypeMapping"/>-->
+        <!--<table tableName="config_grade_info" domainObjectName="ConfigGradeInfo"/>-->
+        <!--<table tableName="util_sensitive" domainObjectName="UtilSensitive"/>-->
+        <!--<table tableName="config_properties" domainObjectName="ConfigProperties"/>-->
+        <!--<table tableName="config_cache_version" domainObjectName="ConfigCacheVersion"/>-->
+        <!--<table tableName="assess_integral" domainObjectName="AssessIntegral"/>-->
+        <!--<table tableName="config_actigro" domainObjectName="ConfigActigro"/>-->
+        <!--<table tableName="config_action" domainObjectName="ConfigAction"/>-->
+        <!--<table tableName="info_auction_detail" domainObjectName="InfoAuctionDetail"/>-->
+        <!--<table tableName="info_consume" domainObjectName="InfoConsume"/>-->
+        <!--<table tableName="config_activity" domainObjectName="ConfigActivity"/>-->
+        <!--<table tableName="config_awards" domainObjectName="ConfigAwards"/>-->
+        <!--<table tableName="draw_frequency" domainObjectName="DrawFrequency"/>-->
+        <!--<table tableName="white_user" domainObjectName="WhiteUser"/>-->
+        <!--<table tableName="info_user_assess_record" domainObjectName="InfoUserAssessRecord"/>-->
+        <!--<table tableName="config_odds" domainObjectName="ConfigOdds"/>-->
+        <!--<table tableName="action_record" domainObjectName="ActionRecord"/>-->
+        <!--<table tableName="relation_article_product" domainObjectName="RelationArticleProduct"/>-->
+        <!--<table tableName="config_product" domainObjectName="ConfigProduct"/>-->
+        <!--<table tableName="config_sync_data" domainObjectName="ConfigSyncData"/>-->
+        <!--<table tableName="info_consume" domainObjectName="InfoConsume"/>-->
+        <!--<table tableName="config_actigro" domainObjectName="ConfigActigro"/>-->
+        <!--<table tableName="config_integral_task" domainObjectName="ConfigIntegralTask"/>-->
+        <!--<table tableName="config_page" domainObjectName="ConfigPage"/>-->
+        <!--<table tableName="credit_award_record" domainObjectName="CreditAwardRecord"/>-->
+        <!--<table tableName="info_user_award" domainObjectName="InfoUserAward"/>-->
+        <!--<table tableName="config_article" domainObjectName="ConfigArticle"/>-->
+        <!--<table tableName="config_product" domainObjectName="ConfigProduct"/>-->
+        <!--<table tableName="config_article" domainObjectName="ConfigArticle"/>-->
+        <!--<table tableName="config_product" domainObjectName="ConfigProduct"/>-->
+        <!--<table tableName="relation_level_product" domainObjectName="RelationLevelProduct"/>-->
+        <!--<table tableName="draw_record" domainObjectName="DrawRecord"/>-->
+        <!--<table tableName="record_user_privilege" domainObjectName="RecordUserPrivilege"/>-->
+        <!--<table tableName="record_user_privilege_detail" domainObjectName="RecordUserPrivilegeDetail"/>-->
+        <!--<table tableName="record_user_privilege_expire" domainObjectName="RecordUserPrivilegeExpire"/>-->
+        <!--<table tableName="record_user_privilege_abate" domainObjectName="RecordUserPrivilegeAbate"/>-->
+        <!--<table tableName="config_rule" domainObjectName="ConfigRule"/>-->
+        <!--<table tableName="config_menu" domainObjectName="ConfigMenu"/>-->
+        <!--<table tableName="task_notice_level" domainObjectName="TaskNoticeLevel"/>-->
+        <!--<table tableName="config_article_task" domainObjectName="ConfigArticleTask"/>-->
+        <!--<table tableName="config_article_level" domainObjectName="ConfigArticleLevel"/>-->
+        <!--<table tableName="record_user_order" domainObjectName="RecordUserOrder"/>-->
+        <table tableName="info_statistics_experience" domainObjectName="InfoStatisticsExperience"/>
+        <!--<table tableName="info_statistics_grade" domainObjectName="InfoStatisticsGrade"/>-->
+        <!--<table tableName="info_statistics_invitation" domainObjectName="InfoStatisticsInvitation"/>-->
+        <!--<table tableName="task_query" domainObjectName="TaskQuery"/>-->
+        <!--<table tableName="config_task_query" domainObjectName="ConfigTaskQuery"/>-->
+        <!--<table tableName="log_task" domainObjectName="LogTask"/>-->
+        <!--<table tableName="task_retry" domainObjectName="TaskRetry"/>-->
+        <!--<table tableName="config_task_queue" domainObjectName="ConfigTaskQueue"/>-->
+        <!--<table tableName="config_task_group" domainObjectName="ConfigTaskGroup"/>-->
+        <!--<table tableName="config_task_type_channel" domainObjectName="ConfigTaskTypeChannel"/>-->
+    </context>
+</generatorConfiguration>
